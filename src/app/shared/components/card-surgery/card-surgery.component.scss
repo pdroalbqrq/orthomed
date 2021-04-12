@@ -1,0 +1,76 @@
+.card-surgery {
+  box-shadow: 0 0 5px rgba(107, 107, 107, 0.37);
+  border-radius: 7px;
+  padding: 20px;
+  max-width: 400px;
+  width: 100%;
+  margin: 10px;
+  height: 300px;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  &:hover > .card-surgery_bg > &__img-bg {
+    transform: scale(1.05);
+    // filter: blur(1px) brightness(0.5);
+  }
+  &__title {
+    text-transform: uppercase;
+    font-family: "Rubik", sans-serif;
+    font-size: 20px;
+    color: #fff;
+  }
+  &__img-bg {
+    object-fit: cover;
+    pointer-events: none;
+    transition: all 0.2s;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: -20px;
+    // transform: scale(1.05);
+    filter: blur(1px) brightness(0.6);
+    border-radius: 7px;
+    z-index: -1;
+  }
+  &__bg-overlay {
+    pointer-events: none;
+    background: #00a2ff59;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: -20px;
+    border-radius: 7px;
+    z-index: -1;
+  }
+  &__line {
+    border-top: 1px solid rgb(255, 255, 255);
+    background: white;
+  }
+  &__desc {
+    font-family: "Rubik", sans-serif;
+    font-size: 15px;
+    color: white;
+    line-height: 1.58;
+  }
+
+  .btn {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+}
+
+@media only screen and (max-width: 595px) {
+  .card-surgery {
+    width: calc(100% - 20px);
+    margin: 10px 10px;
+
+    .btn {
+      position: absolute;
+      bottom: 20px;
+      right: 50%;
+      transform: translate(50%, 0);
+    }
+  }
+}

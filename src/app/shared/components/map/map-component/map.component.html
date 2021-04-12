@@ -1,0 +1,18 @@
+<google-map
+  height="500px"
+  width="100%"
+  [zoom]="zoom"
+  [center]="center"
+  [options]="options"
+>
+  <map-marker
+    #myplace="mapMarker"
+    [position]="center"
+    [options]="markerOptions"
+    (mapClick)="openInfo(myplace)"
+  >
+  </map-marker>
+  <map-info-window>
+    <app-custom-info-window></app-custom-info-window>
+  </map-info-window>
+</google-map>

@@ -1,0 +1,16 @@
+<nav class="navbar" id="navbar" [ngClass]="clazz">
+  <div class="navbar__logo" routerLink="">
+    <img src="../../../../assets/img/logo.png" alt="" srcset="" />
+    <span class="navbar__logo-text">OrthoMedical</span>
+  </div>
+  <div class="navbar__buttons">
+    <a
+      *ngFor="let menu of menuDto"
+      class="navbar__menu-item"
+      routerLinkActive="navbar__menu-item__active"
+      [routerLink]="[menu.route]"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >{{ menu.text }}</a
+    >
+  </div>
+</nav>

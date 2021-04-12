@@ -1,0 +1,21 @@
+.absolute-whatsapp {
+  position: fixed;
+  right: 30px;
+  bottom: 50px;
+  z-index: 99;
+}
+ng-scrollbar {
+  --scrollbar-size: 6px;
+  --scrollbar-thumb-color: #00a2ff69;
+  --scrollbar-thumb-hover-color: #00a3ff;
+  --scrollbar-border-radius: 4px;
+  --scrollbar-padding: 5px; 
+}
+@media only screen and (max-width: 595px) {
+  .absolute-whatsapp {
+    position: fixed;
+    right: 10px;
+    bottom: 50px;
+    z-index: 99;
+  }
+}

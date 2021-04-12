@@ -1,0 +1,34 @@
+<div class="content" id="home">
+  <section class="home__start">
+    <h1 class="title">
+      A OrthoMedical Implantes é uma empresa do segmento de produtos
+      hospitalares e implantes
+    </h1>
+    <p class="desc">
+      Nosso lema é uma prestação de serviço de excelência com materiais de
+      qualidade
+    </p>
+    <button class="btn" (click)="scrollToSection(cardSection)">
+      SAIBA MAIS 🠗
+    </button>
+    <img
+      (click)="scrollToSection(cardSection)"
+      class="hand"
+      src="../../../assets/img/forefinger-and-thumb.svg"
+      width="80"
+      height="80"
+      alt=""
+      srcset=""
+    />
+  </section>
+  <section class="home__bellow" #cardSection>
+    <h1 class="home__bellow-services">Nossos Serviços:</h1>
+    <div class="home__bellow-cards">
+      <app-card-surgery
+        *ngFor="let card of cardsSurgery"
+        [cardSurgeryDto]="card"
+      ></app-card-surgery>
+    </div>
+  </section>
+</div>
+<app-map></app-map>

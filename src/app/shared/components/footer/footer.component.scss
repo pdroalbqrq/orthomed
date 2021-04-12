@@ -1,0 +1,36 @@
+.footer {
+  width: 100%;
+  padding: 50px 0 76px 0;
+  background: rgb(245, 245, 245);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  z-index: 99;
+  &__address-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__pin {
+    width: 60px;
+  }
+  &__address {
+    margin: 0 20px;
+    font-family: "Rubik", sans-serif;
+    line-height: 1.2;
+  }
+}
+@media only screen and (max-width: 595px) {
+  .footer {
+    &__address-div {
+      flex-direction: column;
+    }
+    &__address {
+      text-align: center;
+      margin: 20px 0;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}

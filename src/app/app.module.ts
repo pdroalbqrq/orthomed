@@ -34,7 +34,6 @@ import { NgScrollbarModule } from 'ngx-scrollbar';
     AppRoutingModule,
     BrowserModule,
     GoogleMapsModule,
-    NgScrollbarModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -26,6 +26,24 @@
   &:hover {
     background: #c7eaff;
   }
+  &__arrow-down {
+    width: 17px;
+    fill: var(--bg-color);
+    height: 17px;
+    position: absolute;
+    right: 25px;
+    top: 50%;
+    transform: translate(0, -50%);
+    animation-name: arrow-down;
+    animation-duration: 1s;
+
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    &:nth-of-type(2) {
+      top: 46%;
+      transform: translate(0, -46%);
+    }
+  }
 }
 
 .copyright {
@@ -101,7 +119,22 @@ map-info-window {
   text-align: center;
 }
 
-html,
-body {
-  overflow: hidden;
+body::-webkit-scrollbar {
+  width: 10px;
+  background-color: rgba(255, 255, 255, 0);
+  transition: all 0.2s;
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent;
+  margin: 5px 0 25px 0;
+}
+
+::-webkit-scrollbar-thumb {
+  transition: all 0.2s;
+  background: linear-gradient(transparent, #81d0fd);
+  border-radius: 7px;
+  &:hover {
+    background: linear-gradient(transparent, var(--bg-color));
+  }
 }

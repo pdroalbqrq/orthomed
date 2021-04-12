@@ -20,4 +20,9 @@ export class HeaderComponent {
   public clazz: string;
 
   constructor() {}
+  @HostListener('window:scroll', ['$event'])
+  onScroll() {
+    this.clazz = window.scrollY > 0 ? 'sticky' : null;
+    console.log(this.clazz);
+  }
 }

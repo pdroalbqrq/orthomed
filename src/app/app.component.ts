@@ -12,8 +12,8 @@ import { HeaderComponent } from './shared/components/header/header.component';
 })
 export class AppComponent {
   menuDto: MenuDto[] = null;
-  @ViewChild(NgScrollbar, { static: true }) scrollbarRef: NgScrollbar;
-  @ViewChild(HeaderComponent, { static: true }) header: HeaderComponent;
+  // @ViewChild(NgScrollbar, { static: true }) scrollbarRef: NgScrollbar;
+  // @ViewChild(HeaderComponent, { static: true }) header: HeaderComponent;
   private _scrollSubscription = Subscription.EMPTY;
 
   constructor() {
@@ -24,16 +24,7 @@ export class AppComponent {
     ];
   }
 
-  ngAfterViewInit() {
-    this._scrollSubscription = this.scrollbarRef.verticalScrolled
-      .pipe(
-        map(
-          (e: any) =>
-            (this.header.clazz = e.target.scrollTop >= 1 ? 'sticky' : null)
-        )
-      )
-      .subscribe();
-  }
+  ngAfterViewInit() {}
 
   ngOnDestroy() {
     this._scrollSubscription.unsubscribe();

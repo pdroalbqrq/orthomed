@@ -9,7 +9,7 @@ import { CardSurgeryDto } from 'src/app/shared/components/dto/card-surgery.dto';
 })
 export class HomeComponent {
   cardsSurgery: CardSurgeryDto[];
-  constructor(@Inject(NgScrollbar) private scroll: NgScrollbar) {
+  constructor() {
     this.cardsSurgery = [
       {
         title: 'Cirurgia Buco Maxilo Facial',
@@ -33,10 +33,9 @@ export class HomeComponent {
     const yOffset = -100;
     const y = el.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
-    this.scroll.scrollTo({ top: y });
-  }
-
-  onScroll() {
-    console.log('scrolled!!');
+    window.scrollTo({
+      top: y,
+      behavior: 'smooth',
+    });
   }
 }

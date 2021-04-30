@@ -2,71 +2,13 @@
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
   transition: all 0.2s;
-  // height: 100px;
+  height: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
-  // background: rgba(255, 255, 255, 0.623);
 
-  z-index: 99;
-  .navbar__buttons {
-    width: 100%;
-    max-width: 720px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    .navbar__menu-item.navbar__menu-item__active {
-      &::before {
-        content: "";
-        height: 2px;
-        width: 100%;
-        background: var(--bg-color);
-        position: absolute;
-        right: 0;
-        bottom: 30px;
-        transition: all 0.2s;
-      }
-    }
-    .navbar__menu-item {
-      padding: 37px 5px;
-      margin: 0 25px;
-      color: black;
-      text-decoration: none;
-      font-family: "Rubik", sans-serif;
-      transition: all 0.2s;
-      position: relative;
-
-      &::after {
-        content: "";
-        height: 2px;
-        width: 0px;
-        background: var(--bg-color);
-        position: absolute;
-        right: 0;
-        bottom: 30px;
-        transition: all 0.2s;
-      }
-      &:hover::after {
-        width: 50%;
-      }
-      &::before {
-        content: "";
-        height: 2px;
-        width: 0px;
-        background: var(--bg-color);
-        position: absolute;
-        left: 0;
-        bottom: 30px;
-        transition: all 0.2s;
-      }
-      &:hover::before {
-        width: 50%;
-      }
-    }
-  }
+  z-index: 22;
 
   &__logo {
     cursor: pointer;
@@ -80,12 +22,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
     &-text {
       margin-left: 10px;
-      font-family: "Rubik", sans-serif;
       font-size: 25px;
       position: relative;
       font-weight: bold;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -o-user-select: none;
+      user-select: none;
       &::after {
         content: "Implantes";
         font-size: 13px;
@@ -100,6 +51,71 @@
     }
   }
 }
+.navbar__buttons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 100px;
+  transition: all 0.2s;
+  top: 0;
+  left: 0;
+  z-index: 21;
+  .navbar__menu-item.navbar__menu-item__active {
+    &::before {
+      content: "";
+      height: 2px;
+      width: 100%;
+      background: var(--bg-color);
+      position: absolute;
+      right: 0;
+      bottom: 30px;
+      transition: all 0.2s;
+    }
+  }
+  .navbar__menu-item {
+    padding: 37px 5px;
+    font-weight: bold;
+    margin: 0 25px;
+    color: black;
+    text-decoration: none;
+    transition: all 0.2s;
+    position: relative;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+
+    &::after {
+      content: "";
+      height: 2px;
+      width: 0px;
+      background: var(--bg-color);
+      position: absolute;
+      right: 0;
+      bottom: 30px;
+      transition: all 0.2s;
+    }
+    &:hover::after {
+      width: 50%;
+    }
+    &::before {
+      content: "";
+      height: 2px;
+      width: 0px;
+      background: var(--bg-color);
+      position: absolute;
+      left: 0;
+      bottom: 30px;
+      transition: all 0.2s;
+    }
+    &:hover::before {
+      width: 50%;
+    }
+  }
+}
 
 .sticky {
   background: rgb(255, 255, 255);
@@ -109,35 +125,43 @@
 }
 
 @media only screen and (max-width: 895px) {
+  .sticky {
+    box-shadow: none;
+  }
+  .navbar__buttons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 60px 0px 0px 0px;
+    height: auto;
+    position: sticky;
+    top: 0;
+    .navbar__menu-item.navbar__menu-item__active {
+      &::before {
+        bottom: 5px;
+      }
+    }
+    .navbar__menu-item {
+      padding: 10px 5px 10px 5px;
+      margin: 0px 20px;
+      white-space: nowrap;
+      &::after {
+        bottom: 5px;
+      }
+      &::before {
+        bottom: 5px;
+      }
+    }
+  }
   .navbar {
     position: relative;
     align-items: center;
     justify-content: center;
-    .navbar__buttons {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 60px 0px 0px 0px;
-      .navbar__menu-item.navbar__menu-item__active {
-        &::before {
-          bottom: 5px;
-        }
-      }
-      .navbar__menu-item {
-        padding: 37px 5px 10px 5px;
-        margin: 0px 20px;
-        white-space: nowrap;
-        &::after {
-          bottom: 5px;
-        }
-        &::before {
-          bottom: 5px;
-        }
-      }
-    }
+    height: 20px;
     &__logo {
+      padding: 10px 0 37px 0;
       left: 50%;
-      top: 50px;
+      top: 55px;
       transform: translate(-50%, -50%);
       &-text {
         display: none !important;

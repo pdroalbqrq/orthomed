@@ -1,12 +1,198 @@
-.content {
-  .home__start {
-    height: 100vh;
+.about {
+  .about__title {
+    width: 100%;
+    padding: 50px 0;
+    top: 80px;
+    background: transparent;
+    position: absolute;
+    &-h1 {
+      font-size: 3em;
+      color: #000;
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+
+  .about__start {
+    min-height: calc(100vh - 250px);
     display: flex;
+    padding-top: 100px;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
+    background: linear-gradient(-50deg, var(--bg-color) 499px, #fff 500px),
+      no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    &-image {
+      max-width: 500px;
+      width: 100%;
+      margin: 0 50px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .screen {
+        box-sizing: border-box;
+        border: 15px solid var(--computer);
+        border-radius: 8px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        max-width: 500px;
+        width: 100%;
+        height: 300px;
+        box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.726);
+        background: linear-gradient(
+          45deg,
+          var(--bg-color) 10%,
+          rgb(255, 255, 255) 10%,
+          rgb(255, 255, 255) 90%,
+          var(--bg-color) 90%
+        );
+        position: relative;
+        &__logo {
+          cursor: default;
+          transition: all 0.2;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          color: var(--bg-color);
+          transform: translate(-50%, -50%);
+          outline: none;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+
+          pointer-events: none;
+          &-text {
+            margin-top: 20px;
+            font-size: 40px;
+            position: relative;
+            font-weight: bold;
+
+            pointer-events: none;
+
+            &::after {
+              content: "Implantes";
+              font-size: 20px;
+              position: absolute;
+              bottom: -10px;
+              right: 0;
+            }
+          }
+          img {
+            width: 100px;
+            height: 100px;
+          }
+        }
+      }
+      .screen-base {
+        width: 100%;
+        background: rgb(180, 180, 180);
+        height: 20px;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.726);
+        position: relative;
+        z-index: 2;
+      }
+      .suport {
+        position: relative;
+        height: 50px;
+        width: 50px;
+        z-index: 1;
+        background: rgb(180, 180, 180);
+      }
+      .base {
+        height: 10px;
+        width: 200px;
+        background: rgb(180, 180, 180);
+      }
+    }
+    &-description {
+      width: 500px;
+      p {
+        line-height: 1.54;
+        font-size: 1.3em;
+      }
+    }
   }
-  .home__bellow {
+  .about__bellow {
     background: #fff;
     height: 100vh;
+  }
+}
+
+@media only screen and (max-width: 760px) {
+  .about {
+    .about__title {
+      top: 150px;
+    }
+    .about__start {
+      background: white;
+      &-image {
+        margin: 0 10px;
+        padding-top: 150px;
+        .screen {
+          height: 200px;
+          &__logo {
+            &-text {
+              margin-top: 10px;
+              font-size: 30px;
+              position: relative;
+              font-weight: bold;
+              pointer-events: none;
+              &::after {
+                content: "Implantes";
+                font-size: 15px;
+                position: absolute;
+                bottom: -10px;
+                right: 0;
+              }
+            }
+            img {
+              width: 70px;
+              height: 70px;
+            }
+          }
+        }
+        .screen-base {
+          width: 100%;
+          background: rgb(180, 180, 180);
+          height: 20px;
+          border-bottom-left-radius: 8px;
+          border-bottom-right-radius: 8px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.726);
+          position: relative;
+          z-index: 2;
+        }
+        .suport {
+          position: relative;
+          height: 50px;
+          width: 50px;
+          z-index: 1;
+          background: rgb(180, 180, 180);
+        }
+        .base {
+          height: 10px;
+          width: 200px;
+          background: rgb(180, 180, 180);
+        }
+      }
+      &-description {
+        margin: 30px 0;
+        max-width: 500px;
+        width: 90%;
+        p {
+          text-align: center;
+        }
+      }
+    }
+    .about__bellow {
+      background: #fff;
+      height: 100vh;
+    }
   }
 }

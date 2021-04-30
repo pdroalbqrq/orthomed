@@ -15,6 +15,8 @@ import { GoogleMapsModule } from '@angular/google-maps';
 import { MapComponent } from './shared/components/map/map-component/map.component';
 import { CustomInfoWindowComponent } from './shared/components/map/custom-info-window/custom-info-window.component';
 import { NgScrollbarModule } from 'ngx-scrollbar';
+import { AppTitleService } from './shared/services/title.service';
+import { LogoComponent } from './shared/components/logo/logo.component';
 
 @NgModule({
   declarations: [
@@ -29,13 +31,10 @@ import { NgScrollbarModule } from 'ngx-scrollbar';
     TooltipComponent,
     MapComponent,
     CustomInfoWindowComponent,
+    LogoComponent,
   ],
-  imports: [
-    AppRoutingModule,
-    BrowserModule,
-    GoogleMapsModule,
-  ],
-  providers: [],
+  imports: [AppRoutingModule, BrowserModule, GoogleMapsModule],
+  providers: [AppTitleService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

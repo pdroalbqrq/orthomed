@@ -17,6 +17,9 @@ import { CustomInfoWindowComponent } from './shared/components/map/custom-info-w
 import { NgScrollbarModule } from 'ngx-scrollbar';
 import { AppTitleService } from './shared/services/title.service';
 import { LogoComponent } from './shared/components/logo/logo.component';
+import { PhoneIconComponent } from './shared/components/phone-icon/phone-icon.component';
+import { EmailIconComponent } from './shared/components/email-icon/email-icon.component';
+import { CardContactComponent } from './shared/components/card-contact/card-contact.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +35,9 @@ import { LogoComponent } from './shared/components/logo/logo.component';
     MapComponent,
     CustomInfoWindowComponent,
     LogoComponent,
+    PhoneIconComponent,
+    EmailIconComponent,
+    CardContactComponent,
   ],
   imports: [AppRoutingModule, BrowserModule, GoogleMapsModule],
   providers: [AppTitleService],

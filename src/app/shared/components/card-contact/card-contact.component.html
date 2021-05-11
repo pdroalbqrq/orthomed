@@ -1,0 +1,51 @@
+<div class="card-contact">
+  <ng-template #phone>
+    <app-phone-icon class="card-contact__icon"></app-phone-icon>
+  </ng-template>
+
+  <app-email-icon
+    class="card-contact__icon"
+    *ngIf="contactCard.isEmail; else phone"
+  ></app-email-icon>
+  <h1 class="card-contact__title">
+    {{ contactCard.isEmail ? "Email" : "Telefone" }}
+  </h1>
+  <div class="card-contact__hr"></div>
+  <div class="list">
+    <div
+      class="list-item"
+      (click)="copyToClipboard(list.value)"
+      *ngFor="let list of contactCard.list; let i = index"
+    >
+      <h2 class="list__type">{{ list.type }}:</h2>
+      <h3 class="list__value">
+        {{ list.value }}
+      </h3>
+
+      <div class="copy-icon">
+        <svg id="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+          <defs>
+            <style>
+              .cls-1 {
+                fill: none;
+              }
+            </style>
+          </defs>
+          <title>copy</title>
+          <path
+            d="M28,10V28H10V10H28m0-2H10a2,2,0,0,0-2,2V28a2,2,0,0,0,2,2H28a2,2,0,0,0,2-2V10a2,2,0,0,0-2-2Z"
+            transform="translate(0)"
+          />
+          <path d="M4,18H2V4A2,2,0,0,1,4,2H18V4H4Z" transform="translate(0)" />
+          <rect
+            id="_Transparent_Rectangle_"
+            data-name="&lt;Transparent Rectangle&gt;"
+            class="cls-1"
+            width="32"
+            height="32"
+          />
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>

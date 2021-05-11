@@ -2,21 +2,22 @@
   .about__title {
     width: 100%;
     padding: 50px 0;
-    top: 80px;
+    margin-top: 80px;
     background: transparent;
-    position: absolute;
+    // position: absolute;
     &-h1 {
       font-size: 3em;
       color: #000;
       text-align: center;
       font-weight: bold;
+      background: transparent;
     }
   }
 
   .about__start {
     min-height: calc(100vh - 250px);
     display: flex;
-    padding-top: 100px;
+    // padding-top: 100px;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
@@ -128,13 +129,14 @@
 @media only screen and (max-width: 760px) {
   .about {
     .about__title {
-      top: 150px;
+      padding: 50px 0 0px 0;
+      margin-top: 0px;
     }
     .about__start {
       background: white;
       &-image {
         margin: 0 10px;
-        padding-top: 150px;
+        padding-top: 80px;
         .screen {
           height: 200px;
           &__logo {

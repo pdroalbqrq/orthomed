@@ -6,12 +6,6 @@ import { CardSurgeryDto } from '../dto/card-surgery.dto';
   templateUrl: './card-surgery.component.html',
   styleUrls: ['./card-surgery.component.scss'],
 })
-export class CardSurgeryComponent implements OnInit {
+export class CardSurgeryComponent {
   @Input() cardSurgeryDto: CardSurgeryDto;
-
-  constructor() {}
-
-  ngOnInit(): void {
-    console.log(this.cardSurgeryDto);
-  }
 }

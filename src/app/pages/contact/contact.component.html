@@ -1,4 +1,26 @@
-<div class="content" id="home">
-  <section class="home__start">contato fucionando</section>
-  <section class="home__bellow"></section>
+<div class="contact shadow-overmap" id="contact">
+  <div class="contact__title">
+    <h1 class="contact__title-h1">Entre em contato</h1>
+    <div class="contact__title-h2">
+      <h2>
+        Estamos a disposição para fornecer o melhor serviço possível e
+        informações sobre a empresa e nossos produtos
+      </h2>
+    </div>
+  </div>
+  <section class="contact__start">
+    <div class="contact__start-description">
+      <!-- <div class="contact__phone"></div> -->
+      <!-- <div class="contact__email"> -->
+        <app-card-contact
+          *ngFor="let phone of phoneList"
+          [contactCard]="phone"
+        ></app-card-contact>
+        <app-card-contact
+          *ngFor="let email of emailList"
+          [contactCard]="email"
+        ></app-card-contact>
+      <!-- </div> -->
+    </div>
+  </section>
 </div>

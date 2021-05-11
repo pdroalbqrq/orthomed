@@ -10,6 +10,7 @@ export class HomeComponent {
   cardsSurgery: CardSurgeryDto[];
   constructor(private titleService: AppTitleService) {
     this.titleService.setTitle('Início');
+
     this.cardsSurgery = [
       {
         title: 'Cirurgia Buco Maxilo Facial',

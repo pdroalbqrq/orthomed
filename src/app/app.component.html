@@ -1,16 +1,14 @@
-<!-- <ng-scrollbar> -->
 <app-header [menuDto]="menuDto"></app-header>
 <router-outlet></router-outlet>
 
-<!-- <app-map></app-map> -->
+<app-map></app-map>
 <app-footer></app-footer>
-<!-- </ng-scrollbar> -->
 
-<div class="absolute-whatsapp">
+<a class="absolute-whatsapp" [href]="whatsappLink">
   <app-tooltip text="Fale conosco">
     <app-whatsapp></app-whatsapp>
   </app-tooltip>
-</div>
+</a>
 <div class="copyright">
   <span> © 2021 OrthoMedical Implantes - Todos os direitos reservados </span>
 </div>

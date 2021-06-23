@@ -12,8 +12,7 @@ import { HeaderComponent } from './shared/components/header/header.component';
 })
 export class AppComponent {
   menuDto: MenuDto[] = null;
-  // @ViewChild(NgScrollbar, { static: true }) scrollbarRef: NgScrollbar;
-  // @ViewChild(HeaderComponent, { static: true }) header: HeaderComponent;
+  whatsappLink = 'https://api.whatsapp.com/send?phone=5581998610627&text=Ol%C3%A1,%20gostaria%20das%20informa%C3%A7%C3%B5es%20sobre%20os%20produtos'
   private _scrollSubscription = Subscription.EMPTY;
 
   constructor() {

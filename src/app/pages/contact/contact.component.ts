@@ -34,7 +34,7 @@ export class ContactComponent implements OnInit {
     this.phoneList = [
       {
         isEmail: false,
-        list: [{ value: '+55 (81) 999999999', type: 'ligação e whatsapp' }],
+        list: [{ value: '+55 (81) 99861-0627', type: 'ligação e whatsapp' }],
       },
     ];
   }

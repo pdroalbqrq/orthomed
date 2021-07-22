@@ -50,7 +50,7 @@ export class MapComponent implements AfterViewInit {
   markerOptions: google.maps.MarkerOptions = {
     icon: {
       url: '../../../../../assets/img/pinmap.svg',
-      scaledSize: new google.maps.Size(40, 40),
+      scaledSize: { width: 40, height: 40 } as any,
     },
   };
   constructor() {}
